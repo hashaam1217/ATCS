@@ -57,6 +57,13 @@ typedef enum {
     PAID
 } PaymentStatus;
 
+typedef enum {
+    INTARRIVAL,
+    INTDEPARTURE,
+    DOMARRIVAL,
+    DOMDEPARTURE
+} FlightType;
+
 typedef struct {
     AirlineID ID;
     uint16_t FlightID;
@@ -71,6 +78,7 @@ typedef struct {
 typedef struct {
     uint16_t ID;
     uint16_t FlightID;
+    FlightType FlightType;
     uint16_t Speed;
     uint16_t Heading;
     AircraftType Type;
